@@ -15,6 +15,35 @@
 
 # 2. Initial Solution
 
+class Array
+	
+	def pad(*args)
+		raise ArgumentError, "Too many arguments!" if args.length > 2
+		@number, @default_push = *args
+		
+		if self.size < @number
+			@difference = @number - self.size
+			new_array = Array.new(@difference, @default_push)
+			self.concat(new_array)
+		else
+			self
+		end
+	end
+end
+
+	def pad!(*args)
+		raise ArgumentError, "Too many arguments!" if args.length > 2
+		@number, @default_push = *args
+		
+		if self.size < @number
+			@difference = @number - self.size
+			new_array = Array.new(@difference, @default_push)
+			self.concat!(new_array)
+		else
+			self
+		end
+	end
+end
 
 
 
@@ -23,3 +52,8 @@
 
 
 # 4. Reflection 
+
+
+
+
+#make an array from the new shit and then concat them bitches!
