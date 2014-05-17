@@ -22,28 +22,40 @@ class Array
 		@number, @default_push = *args
 		
 		if self.size < @number
-			@difference = @number - self.size
-			new_array = Array.new(@difference, @default_push)
+			new_array = Array.new((@number - self.size), @default_push)
 			self.concat(new_array)
 		else
 			self
 		end
 	end
-end
 
 	def pad!(*args)
 		raise ArgumentError, "Too many arguments!" if args.length > 2
 		@number, @default_push = *args
 		
 		if self.size < @number
-			@difference = @number - self.size
-			new_array = Array.new(@difference, @default_push)
+			new_array = Array.new((@number - self.size), @default_push)
 			self.concat!(new_array)
 		else
 			self
 		end
 	end
 end
+
+
+#	def pad!(*args)
+#		raise ArgumentError, "Too many arguments!" if args.length > 2
+#		@number, @default_push = *args
+#		
+#		if self.size < @number
+#			@difference = @number - self.size
+#			new_array = Array.new(@difference, @default_push)
+#			self.concat!(new_array)
+#		else
+#			self
+#		end
+#	end
+#end
 
 
 
