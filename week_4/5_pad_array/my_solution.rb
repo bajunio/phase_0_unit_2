@@ -61,7 +61,22 @@ end
 
 # 3. Refactored Solution
 
+class Array
 
+def pad!(minimum, value=nil)
+  (minimum - self.count).times {self.push(value)}    
+  self
+end
+
+
+def pad(minimum, value=nil)
+  arr = []
+  self.each {|x| arr.push(x)}
+  (minimum - arr.count).times {arr.push(value)}
+  arr
+end
+
+end
 
 # 4. Reflection 
 
