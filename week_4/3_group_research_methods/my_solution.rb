@@ -107,8 +107,9 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
-# 
-# 
-# 
-# 
+=begin
+  
+Another really fun exercise!  I like how when I finished up the exercise my brain was still
+firing and wanting to do more with it.  That's how the Why not both? came to be.  heh  ruby
+really is a fun language to learn.  Every time I learn a new built-in method I feel like I'm
+moving from asking about the weather and starting to enter conversational zone!
