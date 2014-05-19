@@ -11,19 +11,39 @@
 
 
 # 3. Initial Solution
-
+=begin
 class Die
   def initialize(labels)
-  	raise ArgumentError, "Must contain at lease one label." if labels.empty?
-  	@labels = labels
+    raise ArgumentError, "Must contain at lease one label." if labels.empty?
+    @labels = labels
   end
 
   def sides
-  	@labels.length
+    @labels.length
   end
 
   def roll
-  	@labels[(1 + rand(@labels.length))]
+    random = rand(@labels.length)
+    p random
+    @labels[random]
+  end
+end
+
+=end
+# 4. Refactored Solution
+
+class Die
+  def initialize(labels)
+    raise ArgumentError, "Must contain at lease one label." if labels.empty?
+    @labels = labels
+  end
+
+  def sides
+    @labels.length
+  end
+
+  def roll
+    @labels[rand(@labels.length)]
   end
 end
 
@@ -32,31 +52,7 @@ die = Die.new(array)
 p die.sides
 p die.roll
 
-# 4. Refactored Solution
-=begin
-class Die
-  def initialize(sides)
-    raise ArgumentError, "Die must contain at least one side." if sides < 1
-    @sides = sides
-  end
-  
-  def sides
-    @sides
-  end
-  
-  def roll
-    1 + rand(@sides)
-  end
-end
 
-some_number = 1 + rand(100)
-die = Die.new(some_number)
-p die.sides
-p die.roll
-
-
-
-=end
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 
