@@ -6,11 +6,19 @@
 
 
 # 1. Pseudocode
-
-# What is the input?
-# What is the output? (i.e. What should the code return?)
+=begin
+# What is the input?  number without commas
+# What is the output? number with commas in correct places
 # What are the steps needed to solve the problem?
 
+Define method separate_comma accepting one argument, value
+	return value if value less than 1000
+	create new array, splitting up value into strings and into reverse order
+	step through the array and insert a comma every 3rd position
+	join up my new array and reverse it once more
+End
+
+=end
 
 
 # 2. Initial Solution
@@ -47,7 +55,9 @@ end
 
 # 4. Reflection 
 =begin
-
-
-
+This challenge had my puzzling around for a bit.  Once I got the hang of the #step method, 
+it became much easier to figure out a solution.  As I look back on my refactored code I
+can't help but feel like that is still to messy.  Line 42 is required for spec, but I feel
+that lines 44 and 45 could somehow be combined.  The only thing I'm thinking is that since
+I'm iterating through that array, it would be difficult to include my #reverse or #join.
 =end
