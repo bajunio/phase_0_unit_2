@@ -1,6 +1,6 @@
 # U2.W5: A Nested Array to Model a Boggle Board
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge by myself.
 
 $boggle_board = [["b", "r", "a", "e"],
                  ["i", "o", "d", "t"],
@@ -24,6 +24,7 @@ $boggle_board = [["b", "r", "a", "e"],
 # Refactored Solution
 
 
+
 # DRIVER TESTS GO BELOW THIS LINE
 
  puts create_word($boggle_board, [2,1], [1,1], [1,2], [0,3]) == "code" #=> returns "code"  
@@ -40,6 +41,11 @@ I was glad to look through this method and see how you worked out the logic.
 # Part 2: Write a method that takes a row number and returns all the elements in the row.  
 
 # Pseudocode
+
+define get_row accepting one arg, row
+  return the board[row]
+end
+
 
 # Initial Solution
 
@@ -91,9 +97,11 @@ end
 # Refactored Solution
 =begin 
 
-This was the best I could do on my own.  After I was able to get things working to the best of my
-ability, I checked in with a fellow boot.  He had used Matrix#transpose to rework the nested array.
-The code looked very slick and I can see how it would cut my for loop right out of the picture.
+This was the best I could do on my own.  After I was able to get
+things working to the best of my ability, I checked in with a 
+fellow boot.  He had used Matrix#transpose to rework the nested 
+array.  The code looked very slick and I can see how it would cut
+my for loop right out of the picture.
 
 =end
 # DRIVER TESTS GO BELOW THIS LINE
@@ -101,3 +109,10 @@ The code looked very slick and I can see how it would cut my for loop right out 
 p get_col(1) == ["r", "o", "c", "a"]
 
 # Reflection 
+=begin 
+Getting the column was a bit more tricky than getting the row.
+I opted to go with a for loop that would act as my counter to 
+advance through the nested arrays.  The col argument would
+remain consistent so that would be easy enough.
+=end
+ 
