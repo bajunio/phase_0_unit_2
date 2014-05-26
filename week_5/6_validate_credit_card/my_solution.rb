@@ -9,6 +9,7 @@
 # Output: verification if it passes luhn's formula
 # Steps:
 =begin 
+
 define a class CreditCard
 
 define initialize accepting one arg, number
