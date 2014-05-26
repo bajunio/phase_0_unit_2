@@ -8,7 +8,22 @@
 # Input:  Number of sides for our new die.
 # Output:  Ability to question amount of sides and also roll random.
 # Steps:
+define class Die
 
+define initialize method accepting one arg, sides
+  raise AE if sides < 1
+  set @sides equal to sides
+end
+
+define sides method, no args
+  return @sides
+end
+
+define roll method, no args
+  return random number up to @sides 
+end
+
+end class
 
 
 
@@ -29,25 +44,23 @@ class Die
   end
 end
 
-some_number = 1 + rand(100)
-die = Die.new(some_number)
-p die.sides
-p die.roll
 
 # 4. Refactored Solution
-
-
-
-
-
-
+=begin 
+Not much to refactor here.
+=end
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
-#p die.new(6).sides == 6
-#p die(6).roll > 1 < 6
-
-
-
+p die.new(6).sides == 6
+p die(6).roll > 1 < 6
 
 
 # 5. Reflection 
+=begin 
+My D&D friends would all be so pleased!  
+
+This was a fairly simple challenge.  I can see that we'll be
+building upon this in the coming week.  Looking forwards to 
+expanding the code!
+
+=end
