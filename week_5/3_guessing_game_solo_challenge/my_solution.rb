@@ -2,9 +2,10 @@
 
 
 # I worked on this challenge by myself.
-=begin
+
 # 2. Pseudocode
 
+=begin
 # Input:  Guess what number the computer is thinking between x and y.
 # Output:  Two methods; guess will return clues, and solved? will return true/false.
 # Steps:
@@ -42,6 +43,7 @@ class GuessingGame
   end
 
   def guess(guess)
+    @right_answer = false
     return :high if guess > @answer
     return :low if guess < @answer
     if guess == @answer
@@ -60,21 +62,22 @@ end
 
 # 4. Refactored Solution
 
-
-
-
 =begin 
+THe only thing I can think to slim this down would be to introduce
+a case statement in the GuessingGame#guess method.  Unsure if that
+would really even be an upgrade.
+=end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 game = GuessingGame.new(10)
 
-p game.solved? == false # => false
-p game.guess(5) == :low # => :low
-p game.guess(20) == :high # => :high
-p game.solved? == false # => false
-p game.guess(10) == :correct # => :correct
-p game.solved? == true # => true
+p game.solved? == false 
+p game.guess(5) == :low 
+p game.guess(20) == :high 
+p game.solved? == false 
+p game.guess(10) == :correct 
+p game.solved? == true 
 
 
 
@@ -82,7 +85,14 @@ p game.solved? == true # => true
 # 5. Reflection
 =begin 
 
+There something about working with symbols that kinds of throws me off.
+I guess I can wrap my mind around them, but I'm certain there is more
+functionality that can be associated with them.  
 
-
+The more I'm exposed to classes the more natural the flow of them is 
+begining to feel.  I can't wait to hook in some real database stuff
+with all of this code.  I want to make something that I can actually
+run over and over for a purpose.  Even something as simple as a movie
+database.  I'm sure I'll get there sooner than later.  : )
 
 =end
