@@ -45,6 +45,7 @@ p bakery_num(4, "pie") == "You need to make 0 pie(s), 0 cake(s), and 4 cookie(s)
 p bakery_num(130, "pie") == "You need to make 16 pie(s), 0 cake(s), and 2 cookie(s)."
 
 # You SHOULD change this driver code. Why? Because it doesn't make sense.
+# Changed!
 p bakery_num(41, "cake") == "You need to make 0 pie(s), 6 cake(s), and 5 cookie(s)." # WHAAAAAT? I thought I said I wanted cake!
 
 # Raises AE Error
@@ -52,6 +53,16 @@ p bakery_num(3, "apples") # this will raise an ArgumentError
 
 
 #  Reflection 
+=begin 
 
+It was fun to work with Steven on this challenge.  He's very focused and 
+we were able to apply some very cool logic together.  
 
+Our refactored solution was able to meet all of the objectives laid out
+in the challenge.  Its becoming more and more fun as we are able to work
+real-life instances into objects in code.  
 
+I feel like the logic we are using to sort the priority is messy...  We
+dug into this challenge and found this a good stopping point.  
+
+=end
