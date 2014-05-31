@@ -74,4 +74,4 @@ had even seen the syntax was ages ago when I was working my way through
 Codecademy. I figure there must have already been instances of problems
 I had been trying to solve that I could have leveraged blocks and yeild
 to make things easier.
-=end
+=end 
